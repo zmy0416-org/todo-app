@@ -9,7 +9,10 @@ function App() {
   const storageKeyRef = React.useRef(Symbol('todo-app').toString())
   const { value, update } = useStorage(storageKeyRef.current)
   React.useEffect(
-    () => setTodos(value.todos ?? []),
+    () => {
+      if (!value) return
+      setTodos(value.todos ?? [])
+    },
     []
   )
   return (
