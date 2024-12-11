@@ -7,7 +7,7 @@ export default function Header({ selectedTab, setSelectedTab }) {
   return (
     <nav className='tab-container'>
       {tabsRef.current.map((tab, tabIndex) => {
-        const count = tab === 'All' ? total : tab === 'Open' ? total - openCount : openCount
+        const count = tab === 'All' ? total : tab === 'Open' ? openCount : total - openCount
         return <button
           className={`tab-button ${selectedTab === tab ? 'tab-selected' : ''}`}
           key={tabIndex}

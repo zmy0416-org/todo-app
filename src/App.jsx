@@ -20,7 +20,7 @@ function App() {
       {
         todos,
         total: todos.length,
-        openCount: todos.filter(todo => todo.completed).length,
+        openCount: todos.filter(todo => !todo.completed).length,
         updateTodos: todos => {
           update({ todos })
           setTodos(todos)
