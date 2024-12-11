@@ -1,7 +1,7 @@
 import React from "react"
 import { Header, Tabs, TodoList, TodoInput } from "./components"
-import { TodoContext } from "./context/todo-context"
 import useStorage from "./hooks/use-storage"
+import { TodoContext } from "./context/todo-context"
 
 function App() {
   const [todos, setTodos] = React.useState([])
